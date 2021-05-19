@@ -1,0 +1,51 @@
+@mixin margin1($margen) {
+    margin: $margen;
+  }
+  
+  @mixin margin2($tb, $lf) {
+    margin: $tb $lf;
+  }
+  
+  @mixin margin3($t, $r, $b, $l) {
+    margin: $t $r $b $l;
+  }
+  
+  @mixin padding1($padding) {
+    margin: $padding;
+  }
+  
+  @mixin padding2($tb, $lf) {
+    padding: $tb $lf;
+  }
+  
+  @mixin padding3($t, $r, $b, $l) {
+    padding: $t $r $b $l;
+  }
+  
+  @mixin flex($align: center, $justify: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+  }
+  
+  // prefijos de navegador
+  /*
+  -moz- firefox
+  -webkit- chrome, safari, versiones actuales de opera, todos los navegadores de ios y firefox para ios
+  -o- versiones antiguas de opera
+  -ms- internet explorer y microsoft edge
+  
+  Investigar al menos 2 reglas experimentales que necesiten prefijo
+  */
+  
+  @mixin enlace() {
+  
+    background-color: $color1;
+    color: $color3;
+  
+  
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.7);
+    -ms-box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.7);
+  }

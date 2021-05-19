@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*Media queries, son reglas que se aplican dependiendo una dimension que nosotros especifiquemos
+a estas dimensiones se las denomina como breakpoints, que basicamente vienen a representar los anchos de diferentes dispositos, para que el diseño se pueda ir adaptando segun el ancho de la pantalla
+Los mas comunes suelen ser : 
+
+max-width : 480px; Celulares muy pequeños
+max-width : 570px; Celulares "estandar"
+max-width : 780px; tablets
+max-width : 990px; laptops y netbooks
+max-width : 1200px; laptops y pc de escritorio
+
+Como se entiende un max-width?
+todos los dispositivos que tengan como maximo determinada dimension hacia abajo
+*/
+@media screen and (max-width: 990px) {
+  nav ul {
+    flex-direction: column;
+    height: auto; }
+  #carousel {
+    height: 60vh; }
+  main {
+    flex-wrap: wrap; }
+  article {
+    width: 100%; }
+  aside {
+    width: 100%; }
+  iframe[height="550"] {
+    height: 300px; }
+  iframe[height="450"] {
+    height: 250px; }
+  iframe[height="300"] {
+    height: 200px; }
+  .imagen, .video, .audio {
+    margin: 15px 0; }
+  footer ul {
+    display: flex; } }

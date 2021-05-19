@@ -1,0 +1,26 @@
+{
+  "name": "prueba2",
+  "version": "1.0.0",
+  "description": "Descripcion del proyecto",
+  "main": "index.html",
+  "scripts": {
+    "compilar_scss": "node-sass -o css/ sass/",
+    "observador": "onchange sass/*.scss -- npm run compilar_scss",
+    "limpiar": "rimraf dist",
+    "minificar": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "distribuir": "npm run limpiar && npm run compilar_scss && npm run minificar"
+  },
+  "author": "Javier YucraZ",
+  "license": "ISC",
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "^0.0.7",
+    "node-sass": "^6.0.0",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

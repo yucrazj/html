@@ -1,0 +1,198 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_base.scss";
+// **************************** //
+
+* {
+  @include margin1(0);
+  @include padding1(0);
+  font-family: "Ubuntu Mono", monospace;
+}
+
+body {
+  background-color: $color1;
+}
+
+header {
+  background-color: $color2;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: $color3;
+}
+
+h2 {
+  @include padding1(10);
+}
+
+// nav {
+//   background-color: $color4;
+// }
+
+// nav ul {
+//   @include flex(center, space-evenly);
+//   @include padding2(10px, 0);
+//   height: 50px;
+// }
+
+// nav ul li {
+//   list-style: none;
+// }
+
+// nav ul li a {
+//   text-decoration: none;
+//   font-size: 20px;
+//   font-family: "Montserrat", sans-serif;
+// }
+
+// Anidacion
+nav {
+  background-color: $color4;
+  ul {
+    @include flex(center, space-evenly);
+    @include padding2(10px, 0);
+    height: 50px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        transition: 0.5s;
+        &:hover {
+          border-radius: 5px;
+          @include enlace();
+          @include padding2(10px, 15px);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding: 20px;
+  display: flex;
+}
+
+article {
+  width: 75%;
+}
+
+article hgroup h1,
+article hgroup h2 {
+  text-align: center;
+  margin: 15px;
+}
+
+article section {
+  margin: 20px;
+  padding: 15px;
+  border: 3px double gray;
+}
+
+article section h3 {
+  margin-bottom: 15px;
+}
+
+article section p {
+  line-height: 25px;
+  text-align: justify;
+}
+
+aside {
+  width: 25%;
+}
+
+aside .anuncio {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+.anuncio h1,
+.anuncio h2 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen,
+.video,
+.audio {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+video,
+audio,
+img {
+  width: 100%;
+}
+
+footer {
+  border: 1px solid black;
+  text-align: center;
+}
+
+footer hgroup {
+  margin: 25px 0;
+}
+
+footer ul {
+  margin: 20px 0;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline;
+  margin: 0 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+[class^="fa"] {
+  font-size: 25px !important;
+}
+
+.fa-facebook-f {
+  color: rgb(42, 93, 233);
+}
+
+.fa-twitter {
+  color: rgb(68, 183, 228);
+}
+
+.fa-instagram {
+  color: rgb(253, 42, 42);
+}
+
+.notificaciones {
+  width: 50%;
+  text-align: center;
+  margin : 0 auto;
+}
+
+// combinacion de rgb con hexadecimal
+#confirmacion {
+  @extend .base;
+  background-color: rgba($color: #b8e79d, $alpha: 0.5);
+  border: 1px solid rgb(18, 163, 62);
+}
+
+#advertencia {
+  @extend .base;
+  background-color: rgba($color: #edf796, $alpha: 0.5);
+  border: 1px solid rgb(247, 243, 49);
+}
+
+#error {
+  @extend .base;
+  background-color: rgba($color: #fd8888, $alpha: 0.5);
+  border: 1px solid rgb(233, 14, 14);
+}
